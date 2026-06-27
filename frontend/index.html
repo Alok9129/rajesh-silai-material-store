@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rajesh Silai Material Store - Ladies Clothing</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">🏪 Rajesh Silai Material Store</div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="cart.html" class="cart-icon">🛒 Cart</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Rajesh Silai Material Store</h1>
+            <p>Premium Ladies Clothing & Traditional Wear</p>
+            <button class="btn" onclick="scrollToProducts()">Shop Now</button>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2>Our Collection</h2>
+            
+            <!-- Filter -->
+            <div class="filters">
+                <input type="text" id="searchInput" placeholder="Search products..." class="search-box" onkeyup="filterProducts()">
+                <select id="categoryFilter" class="filter-select" onchange="filterProducts()">
+                    <option value="">All Categories</option>
+                    <option value="Saree">Saree</option>
+                    <option value="Kurti">Kurti</option>
+                    <option value="Salwar Kameez">Salwar Kameez</option>
+                    <option value="Lehenga">Lehenga</option>
+                    <option value="Dupatta">Dupatta</option>
+                </select>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be loaded here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>Rajesh Silai Material Store has been serving the community with premium ladies clothing and traditional wear for years. We offer authentic, high-quality fabrics and designs that celebrate tradition and style.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form id="contactForm" onsubmit="handleContactSubmit(event)">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Rajesh Silai Material Store. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
